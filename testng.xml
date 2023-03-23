@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="FC_IOS_App_Automation_Suite">
+	<listeners>
+		<listener
+			class-name="com.fc.india.app.listeners.TestListener" />
+	</listeners>
+
+	<test thread-count="5" name="FC_IOS_App_Login_Test">
+		<parameter name="deviceName" value="iPhone 14 Pro Max" />
+		<parameter name="platformversion" value="16" />
+		<classes>
+			<class
+				name="com.fc.india.iosapp.tests.Fc_India_Ios_App_Login_Test" />
+		</classes>
+	</test> <!-- Test -->
+</suite> <!-- Suite -->
