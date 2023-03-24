@@ -1,0 +1,22 @@
+{
+	"invalidUser": {
+		"username": "bhausaheb.kharade@firstcry"
+	},
+
+	"validUser": {
+		"username": "youruserId"
+		
+	},
+	
+	"invalidPassword": {
+		"password": "yourinvalidPassword"
+		
+	},
+	
+	"validPassword": {
+		"password": "YourvalidPassWord"
+		
+	}
+	
+	
+}
