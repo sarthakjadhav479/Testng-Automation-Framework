@@ -4,17 +4,17 @@
 	},
 
 	"validUser": {
-		"username": "youruserId"
+		"username": "indiamobilesite.automation@firstcry.in"
 		
 	},
 	
 	"invalidPassword": {
-		"password": "yourinvalidPassword"
+		"password": "Automation@21"
 		
 	},
 	
 	"validPassword": {
-		"password": "YourvalidPassWord"
+		"password": "Automation@23"
 		
 	}
 	

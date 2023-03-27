@@ -12,7 +12,7 @@ public class FC_Desktop_Login_Objects extends FC_Desktop_BaseTest {
 	@FindBy(xpath = "//*[@id='lemail']")
 	private WebElement email_or_mobile_number_text_Field;
 
-	@FindBy(xpath = "//*[contains(text(),'CONTINUE')]")
+	@FindBy(xpath = "//*[@id='login']/div[3]")
 	private WebElement Click_On_Continue_Button;
 
 	@FindBy(xpath = "//p[@id='LUNmErrMsg']")
