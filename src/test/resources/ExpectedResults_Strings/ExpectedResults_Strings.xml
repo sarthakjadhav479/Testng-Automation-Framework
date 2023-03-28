@@ -23,7 +23,7 @@
 	<String name="error_text_after_click_login_with_password_button">Invalid email address or password
 	</String>
 
-	<String name="info_text_after_click_edit_username_link">Login / Register
+	<String name="info_text_after_click_edit_username_link">Register Here
 	</String>
 
 	<String name="register_page_info_text">Register

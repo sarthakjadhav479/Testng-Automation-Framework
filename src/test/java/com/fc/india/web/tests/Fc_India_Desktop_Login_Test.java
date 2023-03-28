@@ -82,6 +82,8 @@ public class Fc_India_Desktop_Login_Test extends FC_Desktop_BaseTest {
 		System.out.println(Desktop_Login_User.getJSONObject("invalidUser").getString("username"));
 
 		LoginPage.enter_email_or_mobile_number(Desktop_Login_User.getJSONObject("invalidUser").getString("username"));
+
+		Thread.sleep(700);
 		LoginPage.Click_On_Continue_Button();
 		String Actual_Error_Text = LoginPage.Get_Wrong_email_or_MobileNumber_Error_Msg_Text_();
 		String Expected_Error_Text = Strings
@@ -119,10 +121,12 @@ public class Fc_India_Desktop_Login_Test extends FC_Desktop_BaseTest {
 	}
 
 	@Test(priority = 2)
-	public void validUser_Name() {
+	public void validUser_Name() throws InterruptedException {
 
 		LoginPage.clear_text_email_or_mobile_number();
 		LoginPage.enter_email_or_mobile_number(Desktop_Login_User.getJSONObject("validUser").getString("username"));
+
+		Thread.sleep(700);
 		LoginPage.Click_On_Continue_Button();
 
 		String Actual_Resend_OTP_Link_Text = LoginPage.Correct_email_or_MobileNumber_Resend_OTP_Text_();
@@ -321,19 +325,24 @@ public class Fc_India_Desktop_Login_Test extends FC_Desktop_BaseTest {
 	}
 
 	@Test(priority = 6)
-	public void invalid_password() {
+	public void invalid_password() throws InterruptedException {
 
 		LoginPage.click_on_back_button_from_resetpassword_linkPage();
 
 		LoginPage.enter_email_or_mobile_number(Desktop_Login_User.getJSONObject("validUser").getString("username"));
+		Thread.sleep(700);
 
 		LoginPage.Click_On_Continue_Button();
+
+		Thread.sleep(700);
 
 		LoginPage.click_on_LOGIN_WITH_PASSWORD_Link();
 
 		LoginPage.enter_password(Desktop_Login_User.getJSONObject("invalidPassword").getString("password"));
 
 		LoginPage.click_on_LOGIN_WITH_PASSWORD_Button();
+
+		Thread.sleep(700);
 
 		String Actual_error_text_after_click_login_with_password_button = LoginPage.get_invalid_password_text();
 
@@ -487,8 +496,10 @@ public class Fc_India_Desktop_Login_Test extends FC_Desktop_BaseTest {
 
 		LoginPage.enter_email_or_mobile_number(Desktop_Login_User.getJSONObject("validUser").getString("username"));
 
+		Thread.sleep(700);
 		LoginPage.Click_On_Continue_Button();
 
+		Thread.sleep(700);
 		LoginPage.click_on_LOGIN_WITH_PASSWORD_Link();
 
 		LoginPage.enter_password(Desktop_Login_User.getJSONObject("validPassword").getString("password"));

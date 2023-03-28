@@ -12,7 +12,7 @@ public class FC_Desktop_Login_Objects extends FC_Desktop_BaseTest {
 	@FindBy(xpath = "//*[@id='lemail']")
 	private WebElement email_or_mobile_number_text_Field;
 
-	@FindBy(xpath = "//*[@id='login']/div[3]")
+	@FindBy(xpath = "//div[contains(text(),'CONTINUE')]")
 	private WebElement Click_On_Continue_Button;
 
 	@FindBy(xpath = "//p[@id='LUNmErrMsg']")
@@ -33,7 +33,7 @@ public class FC_Desktop_Login_Objects extends FC_Desktop_BaseTest {
 	@FindBy(xpath = "//*[@class='login-back-arrow']")
 	private WebElement click_on_back_button_from_resetpassword_linkPage;
 
-	@FindBy(xpath = "//*[contains(text(),'Login with Password')]")
+	@FindBy(xpath = "//*[@id='login']/div/div[2]")
 	private WebElement click_on_LOGIN_WITH_PASSWORD_Link;
 
 	@FindBy(xpath = "//*[@id='lpass']")
@@ -42,7 +42,7 @@ public class FC_Desktop_Login_Objects extends FC_Desktop_BaseTest {
 	@FindBy(xpath = "//*[contains(text(),'LOGIN WITH PASSWORD')]")
 	private WebElement click_on_LOGIN_WITH_PASSWORD_Button;
 
-	@FindBy(xpath = "//*[contains(text(),'Incorrect password / Password expired')]")
+	@FindBy(xpath = "//*[contains(text(),'Invalid email address or password')]")
 	private WebElement invalid_password_text;
 
 	@FindBy(xpath = "//*[contains(text(),'Edit')]")
