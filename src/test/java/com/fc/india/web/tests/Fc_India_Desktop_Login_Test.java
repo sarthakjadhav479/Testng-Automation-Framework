@@ -83,6 +83,8 @@ public class Fc_India_Desktop_Login_Test extends FC_Desktop_BaseTest {
 
 		LoginPage.enter_email_or_mobile_number(Desktop_Login_User.getJSONObject("invalidUser").getString("username"));
 
+		System.out.println("Test");
+		
 		Thread.sleep(700);
 		LoginPage.Click_On_Continue_Button();
 		String Actual_Error_Text = LoginPage.Get_Wrong_email_or_MobileNumber_Error_Msg_Text_();
