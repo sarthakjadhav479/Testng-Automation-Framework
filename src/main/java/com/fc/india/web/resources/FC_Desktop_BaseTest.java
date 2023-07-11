@@ -60,7 +60,7 @@ public class FC_Desktop_BaseTest {
 
 	public FC_Desktop_BaseTest() {
 
-		PageFactory.initElements(new AppiumFieldDecorator(Config.driver), this);
+		PageFactory.initElements(Config.driver, this);
 
 	}
 	
@@ -250,7 +250,7 @@ public class FC_Desktop_BaseTest {
 
 		Load_TestData_PropertiesFile();
 
-		String url = props.getProperty("UAE_Launch_URL");
+		String url = props.getProperty("Chatbot_Launch_URL");
 		Config.driver.get(url);
 		Config.driver.navigate().refresh();
 		Thread.sleep(1000);
@@ -272,8 +272,8 @@ public class FC_Desktop_BaseTest {
 
 		Thread.sleep(5000);
 
-		final String username = "yourEmailid";
-		final String password = "YourPassword";
+		final String username = "sayali.daunde@firstcry.in";
+		final String password = "Saurali@0301";
 		Properties props = new Properties();
 		props.put("mail.smtp.host", "firstcry.icewarpcloud.in");
 		props.put("mail.smtp.socketFactory.port", "587");

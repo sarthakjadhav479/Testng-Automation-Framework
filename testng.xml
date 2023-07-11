@@ -1,5 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+
 <suite name="FC_IOS_App_Automation_Suite">
 	<listeners>
 		<listener
@@ -8,8 +7,7 @@
 
 	<test thread-count="5" name="Fc_India_Desktop_Login_Test">
 		<classes>
-			<class
-				name="com.fc.india.web.tests.Fc_India_Desktop_Login_Test" />
+			      <class name="com.fc.india.web.tests.Fc_India_chatbot_Login_Test"/>
 		</classes>
 	</test> <!-- Test -->
 </suite> <!-- Suite -->
