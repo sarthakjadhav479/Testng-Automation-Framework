@@ -1,13 +1,12 @@
 
-<suite name="FC_IOS_App_Automation_Suite">
+<suite name="Booking_App_Test_Suite">
 	<listeners>
-		<listener
-			class-name="com.fc.india.web.listeners.TestListener" />
+		<listener class-name="com.app.web.listeners.TestListener" />
 	</listeners>
 
-	<test thread-count="5" name="Fc_India_Desktop_Login_Test">
+	<test thread-count="5" name="Booking_App_Tests">
 		<classes>
-			      <class name="com.fc.india.web.tests.Fc_India_chatbot_Login_Test"/>
+			<class name="com.app.web.tests.App_Login_Tests" />
 		</classes>
-	</test> <!-- Test -->
-</suite> <!-- Suite -->
+	</test>
+</suite>
