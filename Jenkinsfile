@@ -25,11 +25,18 @@ pipeline {
             }
         }
 
-        stage('Publish Test Results') {
+        /*stage('Publish Test Results') {
             steps {
-                junit '**/target/surefire-reports/*.xml'  // TestNG test result publishing
+                junit '*target/surefire-reports.xml'  // TestNG test result publishing
             }
-        }
+        }*/
+        
+        stage('Publish Test Results') {
+   			 steps {
+        junit '*target/surefire-reports/testng-results.xml'
+   		 }
+	}
+
     }
 
     post {
