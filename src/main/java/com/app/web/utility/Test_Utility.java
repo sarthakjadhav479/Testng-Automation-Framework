@@ -17,19 +17,22 @@ public class Test_Utility {
 
 	public static String TakeScreenShot() throws IOException {
 
-		TakesScreenshot ts = (TakesScreenshot) Config.driver;
+		String dest = "";
+		if (Config.driver instanceof TakesScreenshot) {
+			TakesScreenshot ts = (TakesScreenshot) Config.driver;
 
-		File source = ts.getScreenshotAs(OutputType.FILE);
+			File source = ts.getScreenshotAs(OutputType.FILE);
 
-		DateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd-HH-mm-ss");
-		Date date = new Date();
-		String systemtime = dateFormat.format(date);
+			DateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd-HH-mm-ss");
+			Date date = new Date();
+			String systemtime = dateFormat.format(date);
 
-		String dest = System.getProperty("user.dir") + "/All_ScreenShots/Script_FAIL_" + systemtime + ".png";
-		System.err.println(dest);
-		File destination = new File(dest);
-		FileUtils.copyFile(source, destination);
-		System.out.println("Screenshot taken");
+			dest = System.getProperty("user.dir") + "/All_ScreenShots/Script_FAIL_" + systemtime + ".png";
+			System.err.println(dest);
+			File destination = new File(dest);
+			FileUtils.copyFile(source, destination);
+			System.out.println("Screenshot taken");
+		}
 		return dest;
 	}
 }

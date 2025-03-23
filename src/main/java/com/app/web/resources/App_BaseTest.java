@@ -46,9 +46,11 @@ public class App_BaseTest {
 		BrowserName = props.getProperty("BrowserName");
 		if (Config.driver == null) {
 			try {
+
 				if (BrowserName.equalsIgnoreCase("Chrome")) {
 
 					Config.driver = new ChromeDriver();
+					Config.driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
 					GetURL();
 					Config.driver.manage().window().maximize();
 
