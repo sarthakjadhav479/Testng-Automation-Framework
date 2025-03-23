@@ -35,7 +35,7 @@ public class TestListener extends App_BaseTest implements ITestListener {
 			((JavascriptExecutor) Config.driver).executeScript("lambda-status=" + "passed");
 			System.out.println("Note - Running Scripts on Lambda Cloud");
 		} else {
-			System.out.println("Note - Running Scripts on Local Machine or Run_Platform is null.");
+			System.out.println("Note - Running Scripts on Local Machine");
 		}
 	}
 
@@ -56,7 +56,7 @@ public class TestListener extends App_BaseTest implements ITestListener {
 		if (Run_Platform != null && Run_Platform.equalsIgnoreCase("Chrome")) {
 			((JavascriptExecutor) Config.driver).executeScript("lambda-status=" + "failed");
 		}
-		System.out.println("Running Scripts on Local Machine or Run_Platform is null.");
+		System.out.println("Running Scripts on Local Machine");
 	}
 
 	@Override
@@ -68,7 +68,7 @@ public class TestListener extends App_BaseTest implements ITestListener {
 			((JavascriptExecutor) Config.driver).executeScript("lambda-status=" + "passed");
 			System.out.println("Note - Running Scripts on Lambda Cloud");
 		} else {
-			System.out.println("Note - Running Scripts on Local Machine or Run_Platform is null.");
+			System.out.println("Note - Running Scripts on Local Machine");
 		}
 	}
 
