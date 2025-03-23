@@ -2,8 +2,8 @@ pipeline {
     agent any
 
     tools {
-        maven 'Maven_3.8.6'  // Ensure Maven is configured in Jenkins under "Global Tool Configuration"
-        jdk 'Java_11'  // Ensure Java 11 is installed and configured in Jenkins
+        maven 'Maven_3.8.6'  // Ensure this name matches the one in Jenkins' Global Tool Configuration
+        jdk 'Java_11'  // Ensure Java 11 is installed automatically in Jenkins
     }
 
     stages {
@@ -12,7 +12,7 @@ pipeline {
                 git branch: 'main', credentialsId: 'github-token', url: 'https://github.com/sarthakjadhav479/Testng-Automation-Framework.git'
             }
         }
-        
+
         stage('Build') {
             steps {
                 sh 'mvn clean install'
@@ -27,17 +27,7 @@ pipeline {
 
         stage('Publish Test Results') {
             steps {
-                junit '**/target/surefire-reports/*.xml'  // Publish TestNG test results
-            }
-        }
-
-        stage('Deploy (Optional)') {
-            when {
-                branch 'main'
-            }
-            steps {
-                echo 'Deploying the application...'
-                // Add deployment scripts if needed
+                junit '**/target/surefire-reports/*.xml'  // TestNG test result publishing
             }
         }
     }
